@@ -4,8 +4,10 @@
       <img class="card-img-top" [src]="job.thumbnail" alt="Card image cap">
       <div class="card-body">
         <h5 class="card-title">{{ job.title }}</h5>
+        <p><small><i class="fas fa-clock"></i> <strong> Created At:</strong> {{ job.created_at | amDateFormat: 'DD-MM-YYYY' }}</small></p>
+        <p><small><i class="fas fa-clock"></i> <strong> Ending By:</strong> {{ job.end_date | amDateFormat: 'DD-MM-YYYY' }}</small></p>
         <p class="card-subtitle"><i class="fas fa-map-marker-alt"></i> {{ job.city }}, {{ job.zip_code }}</p>
-        <p class="card-text">{{ job.description }}</p>
+        <p class="card-text">{{ (job.description | slice:0:100)+'...'}}</p>
         <a [routerLink]="['job-details', job.id]" (click)="showJobDetails(job)" class="btn btn-warning">Read more</a>
       </div>
     </div>

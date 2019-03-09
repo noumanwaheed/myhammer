@@ -8,6 +8,8 @@ import { NavComponent } from './nav/nav.component';
 import { JobsComponent } from './jobs/jobs.component';
 import { JobDetailsComponent } from './job-details/job-details.component';
 
+import { MomentModule } from 'ngx-moment';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,7 +20,8 @@ import { JobDetailsComponent } from './job-details/job-details.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    MomentModule
   ],
   providers: [],
   bootstrap: [AppComponent]
