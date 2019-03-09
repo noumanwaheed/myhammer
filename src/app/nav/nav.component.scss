@@ -1,0 +1,17 @@
+.navbar{
+  margin-bottom: 20px;
+  &.navbar-light{
+    &.bg-grey{
+      background-color: #D6DBDF !important;
+    }
+    .navbar-toggler{
+      border: none;
+    }
+    .navbar-brand{
+      img{
+        width:160px;
+        height: 60px;
+      }
+    }
+  }
+}
