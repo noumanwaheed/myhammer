@@ -7,6 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavComponent implements OnInit {
 
+  appLogoPath = '../../assets/images/logo.svg';
+  navItems = [
+    {
+      title: 'Jobs',
+      href: '/',
+    }
+  ];
+
   constructor() { }
 
   ngOnInit() {
