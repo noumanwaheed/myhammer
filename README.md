@@ -3,7 +3,7 @@
 This project is created as a coding challenge for MyHammer GmbH.
 
 ## Installation
-Run `git pull https://github.com/noumanwaheed/myhammer.git`
+Run `git clone https://github.com/noumanwaheed/myhammer.git`
 
 Run `npm install`
 
