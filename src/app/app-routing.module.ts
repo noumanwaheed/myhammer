@@ -5,7 +5,6 @@ import {JobDetailsComponent} from './job-details/job-details.component';
 
 const routes: Routes = [
   {path: '', component: JobsComponent},
-  {path: 'jobs', component: JobsComponent},
   {path: 'job-details/:id', component: JobDetailsComponent}
 ];
 

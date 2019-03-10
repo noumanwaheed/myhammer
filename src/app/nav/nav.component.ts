@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavComponent implements OnInit {
 
-  appTitle = '<i class="fas fa-hammer text-warning"></i> MyHammer';
+  appTitle = 'MyHammer';
   navItems = [
     {
       title: 'Jobs',

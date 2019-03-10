@@ -1,15 +1,27 @@
 import { TestBed, async } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
+import { NavComponent } from './nav/nav.component';
+import { JobsComponent } from './jobs/jobs.component';
+import { JobDetailsComponent } from './job-details/job-details.component';
+import { DateFormatPipe } from 'ngx-moment';
+import { AppRoutingModule } from './app-routing.module';
+import {HttpClientTestingModule} from '@angular/common/http/testing';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [
-        RouterTestingModule
+        AppRoutingModule,
+        RouterTestingModule,
+        HttpClientTestingModule
       ],
       declarations: [
-        AppComponent
+        AppComponent,
+        NavComponent,
+        JobsComponent,
+        JobDetailsComponent,
+        DateFormatPipe
       ],
     }).compileComponents();
   }));
@@ -23,13 +35,7 @@ describe('AppComponent', () => {
   it(`should have as title 'myhammer'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
-    expect(app.title).toEqual('myhammer');
+    expect(app.title).toEqual('myhammer coding challenge');
   });
 
-  it('should render title in a h1 tag', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('h1').textContent).toContain('Welcome to myhammer!');
-  });
 });

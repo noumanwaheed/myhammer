@@ -9,7 +9,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class JobDetailsComponent implements OnInit {
 
-  job = null;
+  job = {};
   noAttachments = false;
 
   constructor(private dataService: DataService, private route: ActivatedRoute) { }

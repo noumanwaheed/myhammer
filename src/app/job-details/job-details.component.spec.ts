@@ -1,6 +1,11 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { JobDetailsComponent } from './job-details.component';
+import { DateFormatPipe } from 'ngx-moment';
+import { AppRoutingModule } from '../app-routing.module';
+import {JobsComponent} from '../jobs/jobs.component';
+import {HttpClientTestingModule} from '@angular/common/http/testing';
+import {RouterTestingModule} from '@angular/router/testing';
 
 describe('JobDetailsComponent', () => {
   let component: JobDetailsComponent;
@@ -8,7 +13,8 @@ describe('JobDetailsComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ JobDetailsComponent ]
+      imports: [AppRoutingModule, RouterTestingModule, HttpClientTestingModule],
+      declarations: [ DateFormatPipe, JobsComponent, JobDetailsComponent]
     })
     .compileComponents();
   }));

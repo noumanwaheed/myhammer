@@ -6,7 +6,7 @@
           <div class="card-body">
             <div class="media">
               <div class="mr-3">
-                <img [src]="job.thumbnail">
+                <img [src]="job.thumbnail != null? job.thumbnail: ''">
                 <br>
                 <small><i class="fas fa-envelope"></i> Total Messages: <span class="badge badge-pill badge-warning"> 1 </span></small><br>
                 <small><i class="fas fa-envelope"></i> Unread Messages: <span class="badge badge-pill badge-warning"> 1 </span></small><br>
