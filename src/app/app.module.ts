@@ -9,6 +9,7 @@ import { JobsComponent } from './jobs/jobs.component';
 import { JobDetailsComponent } from './job-details/job-details.component';
 
 import { MomentModule } from 'ngx-moment';
+import { TooltipModule } from 'ngx-bootstrap/tooltip';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { MomentModule } from 'ngx-moment';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    MomentModule
+    MomentModule,
+    TooltipModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

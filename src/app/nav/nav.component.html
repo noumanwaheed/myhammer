@@ -1,11 +1,13 @@
-<nav class="navbar navbar-expand-lg navbar-light sticky-top bg-grey">
-  <a class="navbar-brand" routerLink="/"><img [src]="appLogoPath" /></a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-    <div class="navbar-nav ml-auto">
-      <a *ngFor="let item of navItems" [routerLink]="item.href" class="nav-item nav-link" >{{ item.title }}</a>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top bg-grey">
+  <div class="container d-flex justify-content-between">
+    <a class="navbar-brand" routerLink="/" [innerHTML]="appTitle"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav ml-auto">
+        <a *ngFor="let item of navItems" [routerLink]="item.href" class="nav-item nav-link" >{{ item.title }}</a>
+      </div>
     </div>
   </div>
 </nav>

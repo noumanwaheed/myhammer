@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavComponent implements OnInit {
 
-  appLogoPath = '../../assets/images/logo.svg';
+  appTitle = '<i class="fas fa-hammer text-warning"></i> MyHammer';
   navItems = [
     {
       title: 'Jobs',
