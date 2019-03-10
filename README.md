@@ -1,6 +1,6 @@
 # Myhammer
 
-This project is created as a coding challenge for MyHammer GmbH.
+This project is created as a coding challenge for MyHammer AG.
 
 ## Installation
 Run `git clone https://github.com/noumanwaheed/myhammer.git`
