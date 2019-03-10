@@ -1,6 +1,6 @@
 <div class="row py-5">
   <div class="col-12" *ngFor="let job of jobs">
-    <div class="card mb-4 shadow-sm">
+    <div class="card mb-4 shadow-sm" *ngIf="job.state == 'active'">
       <a [routerLink]="['job-details', job.id]" class="text-dark text-decoration-none" tooltip="Click for more detailed information!">
         <div class="row no-gutters">
           <div class="col-md-2">

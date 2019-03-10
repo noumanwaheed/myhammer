@@ -10,16 +10,13 @@ import { ActivatedRoute } from '@angular/router';
 export class JobDetailsComponent implements OnInit {
 
   job = {};
-  noAttachments = false;
 
   constructor(private dataService: DataService, private route: ActivatedRoute) { }
 
   ngOnInit() {
     const id = this.route.snapshot.paramMap.get('id');
-    this.dataService.fetchJobByID(id).then( job => {
+    this.dataService.fetchJobByID(id).then( (job: object) => {
       this.job = job;
-      // @ts-ignore
-      this.noAttachments = (job.attachments.length === 0) ? true : false;
     });
   }
 
