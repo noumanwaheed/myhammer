@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  jobsUrl : `http://localhost:3001/data`
+  jobsUrl : 'http://localhost:3001/body'
 };
 
 /*

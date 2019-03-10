@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  jobsUrl : `http://localhost:3000/data`
+  jobsUrl : 'http://localhost:3001/body'
 };

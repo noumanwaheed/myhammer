@@ -1,7 +1,7 @@
-<div class="row no-padding py-5">
+<div class="row py-5">
   <div class="col-12" *ngFor="let job of jobs">
     <div class="card mb-4 shadow-sm">
-      <a [routerLink]="['job-details', job.id]" (click)="showJobDetails(job)" class="text-dark text-decoration-none" tooltip="Click for more detailed information!">
+      <a [routerLink]="['job-details', job.id]" class="text-dark text-decoration-none" tooltip="Click for more detailed information!">
         <div class="row no-gutters">
           <div class="col-md-2">
             <img class="card-img-top" [src]="job.thumbnail" alt="Card image cap">

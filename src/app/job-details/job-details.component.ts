@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {DataService} from '../data.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-job-details',
@@ -9,11 +10,17 @@ import {DataService} from '../data.service';
 export class JobDetailsComponent implements OnInit {
 
   job = null;
+  noAttachments = false;
 
-  constructor(private dataService: DataService) { }
+  constructor(private dataService: DataService, private route: ActivatedRoute) { }
 
   ngOnInit() {
-    this.dataService.currentJob.subscribe(job => this.job = job);
+    const id = this.route.snapshot.paramMap.get('id');
+    this.dataService.fetchJobByID(id).then( job => {
+      this.job = job;
+      // @ts-ignore
+      this.noAttachments = (job.attachments.length === 0) ? true : false;
+    });
   }
 
 }

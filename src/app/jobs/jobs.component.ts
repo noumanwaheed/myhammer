@@ -13,18 +13,14 @@ export class JobsComponent implements OnInit {
   constructor(private dataService: DataService) { }
 
   ngOnInit() {
-    this.dataService.fetchJobs().then( data => {
+    this.dataService.fetchJobs().then( jobs => {
       // @ts-ignore
-      for (let job of data.body) {
+      for (let job of jobs) {
         if (job.state === 'active') {
           this.jobs.push(job);
         }
       }
     });
-  }
-
-  showJobDetails(job: any) {
-    this.dataService.changeJob(job);
   }
 
 }

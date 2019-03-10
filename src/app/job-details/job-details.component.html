@@ -1,10 +1,34 @@
-<div class="col-md-3">
-  <div class="card">
-    <img class="card-img-top" [src]="job.thumbnail" alt="Card image cap">
-    <div class="card-body">
-      <h5 class="card-title">{{ job.title }}</h5>
-      <p class="card-subtitle"><i class="fas fa-map-marker-alt"></i> {{ job.city }}, {{ job.zip_code }}</p>
-      <p class="card-text">{{ job.description }}</p>
-    </div>
+<div class="col py-4">
+  <a [routerLink]="['/']" class="text-dark text-decoration-none" tooltip="Click to go to home!"><i class="fas fa-backspace"></i> Back</a><br><br>
+  <div class="card mb-4 shadow-sm">
+    <div class="row no-gutters">
+        <div class="col">
+          <div class="card-body">
+            <div class="media">
+              <div class="mr-3">
+                <img [src]="job.thumbnail">
+                <br>
+                <small><i class="fas fa-envelope"></i> Total Messages: <span class="badge badge-pill badge-warning"> 1 </span></small><br>
+                <small><i class="fas fa-envelope"></i> Unread Messages: <span class="badge badge-pill badge-warning"> 1 </span></small><br>
+              </div>
+              <div class="media-body">
+                <h5 class="mt-0">{{ job.title }}</h5>
+                <p><small><i class="fas fa-clock"></i></small> Created: <span class="badge badge-warning"> {{ job.created_at | amDateFormat: 'DD-MM-YYYY' }} </span><small>&nbsp;&nbsp;<i class="fas fa-clock"></i></small> Ending: <span class="badge badge-warning"> {{ job.end_date | amDateFormat: 'DD-MM-YYYY' }} </span></p>
+                <p class="card-subtitle"><i class="fas fa-map-marker-alt"></i> {{ job.city }}, {{ job.zip_code }}</p>
+                <p class="card-text">{{ job.description }}</p>
+                <p class="card-text"><strong>Attachments:</strong></p>
+                <p *ngIf="noAttachments">No Attachments</p>
+                <div class="row">
+                  <div *ngFor="let attachment of job.attachments" class="col-md-2 text-center">
+                    <div class="card mb-4 shadow-sm">
+                      <img *ngIf="attachment" [src]="attachment" class="card-img" alt="">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
   </div>
 </div>
