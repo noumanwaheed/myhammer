@@ -7,6 +7,10 @@ Run `git clone https://github.com/noumanwaheed/myhammer.git`
 
 Run `npm install`
 
+Run `npm install -g @angular/cli`
+
+Run `npm install -g json-server`
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`.
